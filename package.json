@@ -1,0 +1,33 @@
+{
+  "name": "a-bookmark-landing-page",
+  "version": "1.0.0",
+  "description": "A Bookmark landing page",
+  "main": "index.js",
+  "scripts": {
+    "watch:scss": "sass -w styles/styles.scss styles/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olaide-hok/bookmark.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "SASS",
+    "JS"
+  ],
+  "author": "Habeeb Kareem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olaide-hok/bookmark.git/issues"
+  },
+  "homepage": "https://github.com/olaide-hok/bookmark.git#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.17",
+    "sass": "^1.83.4",
+    "tailwindcss": "^4.0.17"
+  },
+  "devDependencies": {
+    "@awmottaz/prettier-plugin-void-html": "^1.7.0"
+  }
+}
