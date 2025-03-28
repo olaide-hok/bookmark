@@ -19,66 +19,481 @@
       rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- <link rel="stylesheet" href="./styles/styles.css"> -->
+    <!-- <link rel="stylesheet" href="./styles/normalize.css"> -->
+    <link rel="stylesheet" href="./styles/output.css">
     <script defer src="index.js"></script>
 
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
   <body>
-    Features Pricing Contact Login A Simple Bookmark Manager A clean and simple
-    interface to organize your favourite websites. Open a new browser tab and
-    see your sites load instantly. Try it for free. Get it on Chrome Get it on
-    Firefox Features Our aim is to make it quick and easy for you to access your
-    favourite websites. Your bookmarks sync between your devices so you can
-    access them on the go. Simple Bookmarking Speedy Searching Easy Sharing
-    Bookmark in one click Organize your bookmarks however you like. Our simple
-    drag-and-drop interface gives you complete control over how you manage your
-    favourite sites. More Info Intelligent search Our powerful search feature
-    will help you find saved sites in no time at all. No need to trawl through
-    all of your bookmarks. More Info Share your bookmarks Easily share your
-    bookmarks and collections with others. Create a shareable link that you can
-    send at the click of a button. More Info Download the extension We’ve got
-    more browsers in the pipeline. Please do let us know if you’ve got a
-    favourite you’d like us to prioritize. Add to Chrome Minimum version 62 Add
-    & Install Extension Add to Firefox Minimum version 55 Add & Install
-    Extension Add to Opera Minimum version 46 Add & Install Extension Frequently
-    Asked Questions Here are some of our FAQs. If you have any other questions
-    you’d like answered please feel free to email us.
+    <main class="container 2xl:w-[1440px] font-rubik">
+      <!-- Desktop Navigation -->
+      <nav class="navigation flex justify-between pt-[40px] px-[2rem]">
+        <div class="logo">
+          <img src="./images/logo-bookmark.svg" alt="bookmark logo">
+        </div>
 
-    <!-- Question 1 -->
-    What is Bookmark?
+        <div class="hidden md:flex">
+          <ul class="flex">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <button type="button">Login</button>
+        </div>
 
-    <!-- Answer 1 -->
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
-    justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare
-    mattis.
+        <button id="mobile-menu" class="md:hidden" type="button">
+          <img src="./images/icon-hamburger.svg" alt="mobile menu">
+        </button>
+      </nav>
 
-    <!-- Question 2 -->
-    How can I request a new browser?
+      <!-- Hero -->
 
-    <!-- Answer 2 -->
-    Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
-    ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet
-    convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse
-    imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue
-    massa, ultricies non ligula. Suspendisse imperdiet.
+      <div
+        class="hero_banner flex flex-col-reverse md:flex-row mt-[81px] md:m-0"
+      >
+        <section
+          class="flex flex-col items-center gap-y-4 px-8 mt-3 md:m-0 text-center"
+        >
+          <h1
+            class="text-(--navyBlue) text-3xl font-medium leading-[40px] tracking-[-0.094px]"
+          >
+            A Simple Bookmark Manager
+          </h1>
+          <p class="text-(--navyBlue)/50 text-[15px] leading-[25px]">
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
 
-    <!-- Question 3 -->
-    Is there a mobile app?
+          <div class="hero_ctas flex gap-x-[14px] mt-[1rem]">
+            <button
+              class="text-white text-sm font-medium leading-[28px] py-[10px] px-[1rem] tracking-[0.25px] bg-(--lightBlue) hover:text-(--lightBlue) hover:cursor-pointer hover:bg-white hover:border-(--lightBlue) hover:border-[2px] hover:border-solid rounded-[5px] shadow-(--boxShadow)"
+              type="button"
+            >
+              Get it on Chrome
+            </button>
+            <button
+              class="text-(--navyBlue)/75 text-sm font-medium leading-[28px] py-[10px] px-[1rem] tracking-[0.25px] bg-(--greyWhite) rounded-[5px] shadow-(--boxShadow) hover:border-(--darkGrey) hover:border-[2px] hover:border-solid"
+              type="button"
+            >
+              Get it on Firefox
+            </button>
+          </div>
+        </section>
+        <div class="hero-image">
+          <img src="./images/illustration-hero.svg" alt="hero banner">
+        </div>
+      </div>
 
-    <!-- Answer 3 -->
-    Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum
-    dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra
-    mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.
+      <!-- Features Section -->
+      <div class="features mt-[140px]">
+        <div class="flex flex-col items-center text-center px-8">
+          <h2
+            class="text-2xl text-(--navyBlue) font-medium leading-[52px] tracking-[-0.075px]"
+          >
+            Features
+          </h2>
+          <p class="text-(--navyBlue)/50 text-[15px] leading-[25px]">
+            Our aim is to make it quick and easy for you to access your
+            favourite websites. Your bookmarks sync between your devices so you
+            can access them on the go.
+          </p>
+        </div>
 
-    <!-- Question 4 -->
-    What about other Chromium browsers?
+        <!-- Tabbed component -->
 
-    <!-- Answer 4 -->
-    Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at
-    euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut
-    velit. More Info 35,000+ already joined Stay up-to-date with what we’re
-    doing Contact Us Features Pricing Contact
+        <div class="tabbed-component">
+          <div
+            class="tabs flex flex-col md:flex-row mt-[40px] mb-[72.11px] px-8"
+          >
+            <button
+              type="button"
+              class="tab-btn active relative text-base text-(--navyBlue) leading-[17px] tracking-[0.533px] py-[20px] border-y border-(--borderColor) hover:cursor-pointer hover:text-(--orange)"
+              data-tab="tab1"
+            >
+              Simple Bookmarking
+            </button>
+            <button
+              type="button"
+              class="tab-btn relative text-base text-(--navyBlue) leading-[17px] tracking-[0.533px] py-[20px] hover:cursor-pointer hover:text-(--orange)"
+              data-tab="tab2"
+            >
+              Speedy Searching
+            </button>
+            <button
+              type="button"
+              class="tab-btn relative text-base text-(--navyBlue) leading-[17px] tracking-[0.533px] py-[20px] border-y border-(--borderColor) hover:cursor-pointer hover:text-(--orange)"
+              data-tab="tab3"
+            >
+              Easy Sharing
+            </button>
+          </div>
+
+          <div class="tab-content">
+            <!-- Simple Bookmarking -->
+            <div class="tab-panel active" id="tab1">
+              <div>
+                <img
+                  src="./images/illustration-features-tab-1.svg"
+                  alt="illustration-features-tab-1"
+                >
+              </div>
+              <section
+                class="flex flex-col items-center text-center px-8 mt-8 md:m-0"
+              >
+                <h3
+                  class="text-2xl text-(--navyBlue) font-medium leading-[52px] tracking-[-0.075px]"
+                >
+                  Bookmark in one click
+                </h3>
+                <p
+                  class="desc text-(--navyBlue)/50 text-[15px] leading-[25px] mb-[15px]"
+                >
+                  Organize your bookmarks however you like. Our simple
+                  drag-and-drop interface gives you complete control over how
+                  you manage your favourite sites.
+                </p>
+
+                <button
+                  class="text-white text-sm font-medium leading-[28px] py-[10px] px-[1.5rem] tracking-[0.25px] bg-(--lightBlue) hover:text-(--lightBlue) hover:cursor-pointer hover:bg-white hover:border-(--lightBlue) hover:border-[2px] hover:border-solid rounded-[5px] shadow-(--boxShadow) w-[114px]"
+                  type="button"
+                >
+                  More Info
+                </button>
+              </section>
+            </div>
+
+            <!-- Speedy Searching -->
+            <div class="tab-panel hidden" id="tab2">
+              <div>
+                <img
+                  src="./images/illustration-features-tab-2.svg"
+                  alt="illustration-features-tab-2"
+                >
+              </div>
+              <section class="flex flex-col">
+                <h3
+                  class="text-2xl text-(--navyBlue) font-medium leading-[52px] tracking-[-0.075px]"
+                >
+                  Intelligent search
+                </h3>
+                <p class="desc text-(--navyBlue)/50 text-[15px] leading-[25px]">
+                  Our powerful search feature will help you find saved sites in
+                  no time at all. No need to trawl through all of your
+                  bookmarks.
+                </p>
+
+                <button
+                  class="text-white text-sm font-medium leading-[28px] py-[10px] px-[1.5rem] tracking-[0.25px] bg-(--lightBlue) hover:text-(--lightBlue) hover:cursor-pointer hover:bg-white hover:border-(--lightBlue) hover:border-[2px] hover:border-solid rounded-[5px] shadow-(--boxShadow) w-[114px]"
+                  type="button"
+                >
+                  More Info
+                </button>
+              </section>
+            </div>
+
+            <!-- Easy Sharing -->
+            <div class="tab-panel hidden" id="tab3">
+              <div>
+                <img
+                  src="./images/illustration-features-tab-3.svg"
+                  alt="illustration-features-tab-3"
+                >
+              </div>
+              <section class="flex flex-col">
+                <h3
+                  class="text-2xl text-(--navyBlue) font-medium leading-[52px] tracking-[-0.075px]"
+                >
+                  Share your bookmarks
+                </h3>
+                <p class="desc text-(--navyBlue)/50 text-[15px] leading-[25px]">
+                  Easily share your bookmarks and collections with others.
+                  Create a shareable link that you can send at the click of a
+                  button.
+                </p>
+
+                <button
+                  class="text-white text-sm font-medium leading-[28px] py-[10px] px-[1.5rem] tracking-[0.25px] bg-(--lightBlue) hover:text-(--lightBlue) hover:cursor-pointer hover:bg-white hover:border-(--lightBlue) hover:border-[2px] hover:border-solid rounded-[5px] shadow-(--boxShadow) w-[114px]"
+                  type="button"
+                >
+                  More Info
+                </button>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Download Extension -->
+      <div class="extension flex flex-col gap-y-[40px] items-center mt-[77px]">
+        <div class="content text-center px-8">
+          <h4
+            class="text-2xl text-(--navyBlue) font-medium leading-[52px] tracking-[-0.075px]"
+          >
+            Download the extension
+          </h4>
+          <p class="text-(--navyBlue)/50 text-[15px] leading-[25px]">
+            We’ve got more browsers in the pipeline. Please do let us know if
+            you’ve got a favourite you’d like us to prioritize.
+          </p>
+        </div>
+        <div class="flex flex-col gap-y-[40px] md:flex-row items-center">
+          <!-- chrome -->
+          <div
+            class="bg-(--white) rounded-[15px] shadow-(--boxShadowTile) pt-[49px] pb-6"
+          >
+            <div class="flex flex-col items-center">
+              <img
+                class="w-[102px] h-[100px]"
+                src="./images/logo-chrome.svg"
+                alt="chrome"
+              >
+              <p
+                class="text-(--navyBlue) text-xl font-medium tracking-[0.25px] mt-8 mb-[6px]"
+              >
+                Add to Chrome
+              </p>
+              <p class="text-(--navyBlue)/50 text-[15px] leading-[28px]">
+                Minimum version 62
+              </p>
+            </div>
+            <img class="mt-8 mb-6" src="./images/bg-dots.svg" alt="dots">
+            <button
+              class="text-white text-sm font-medium leading-[28px] py-[10px] px-[34.5px] tracking-[0.25px] bg-(--lightBlue) hover:text-(--lightBlue) hover:cursor-pointer hover:bg-white hover:border-(--lightBlue) hover:border-[2px] hover:border-solid rounded-[5px] shadow-(--boxShadow) mx-6"
+              type="button"
+            >
+              Add & Install Extension
+            </button>
+          </div>
+          <!-- firefox -->
+          <div
+            class="bg-(--white) rounded-[15px] shadow-(--boxShadowTile) pt-[49px] pb-6"
+          >
+            <div class="flex flex-col items-center">
+              <img
+                class="w-[105px] h-[100px]"
+                src="./images/logo-firefox.svg"
+                alt="firefox"
+              >
+              <p
+                class="text-(--navyBlue) text-xl font-medium tracking-[0.25px] mt-8 mb-[6px]"
+              >
+                Add to Firefox
+              </p>
+              <p class="text-(--navyBlue)/50 text-[15px] leading-[28px]">
+                Minimum version 55
+              </p>
+            </div>
+            <img class="mt-8 mb-6" src="./images/bg-dots.svg" alt="dots">
+            <button
+              class="text-white text-sm font-medium leading-[28px] py-[10px] px-[34.5px] tracking-[0.25px] bg-(--lightBlue) hover:text-(--lightBlue) hover:cursor-pointer hover:bg-white hover:border-(--lightBlue) hover:border-[2px] hover:border-solid rounded-[5px] shadow-(--boxShadow) mx-6"
+              type="button"
+            >
+              Add & Install Extension
+            </button>
+          </div>
+          <!-- opera -->
+          <div
+            class="bg-(--white) rounded-[15px] shadow-(--boxShadowTile) pt-[49px] pb-6"
+          >
+            <div class="flex flex-col items-center">
+              <img
+                class="w-[96px] h-[100px]"
+                src="./images/logo-opera.svg"
+                alt="opera"
+              >
+              <p
+                class="text-(--navyBlue) text-xl font-medium tracking-[0.25px] mt-8 mb-[6px]"
+              >
+                Add to Opera
+              </p>
+              <p class="text-(--navyBlue)/50 text-[15px] leading-[28px]">
+                Minimum version 46
+              </p>
+            </div>
+            <img class="mt-8 mb-6" src="./images/bg-dots.svg" alt="dots">
+            <button
+              class="text-white text-sm font-medium leading-[28px] py-[10px] px-[34.5px] tracking-[0.25px] bg-(--lightBlue) hover:text-(--lightBlue) hover:cursor-pointer hover:bg-white hover:border-(--lightBlue) hover:border-[2px] hover:border-solid rounded-[5px] shadow-(--boxShadow) mx-6"
+              type="button"
+            >
+              Add & Install Extension
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accordion FAQ -->
+      <div class="accordion-container">
+        <div class="content flex flex-col">
+          <h5 class="text">Frequently Asked Questions</h5>
+          <p class="text">
+            ere are some of our FAQs. If you have any other questions you’d like
+            answered please feel free to email us.
+          </p>
+        </div>
+        <div class="accordion">
+          <div class="accordion" id="">
+            <!-- Question 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  aria-controls="collapseOne"
+                >
+                  What is Bookmark?
+                </button>
+              </h2>
+              <!-- Answer 1 -->
+              <div id="collapseOne" class="hidden" aria-labelledby="headingOne">
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                  tincidunt justo eget ultricies fringilla. Phasellus blandit
+                  ipsum quis quam ornare mattis.
+                </div>
+              </div>
+            </div>
+            <!-- Question 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  aria-controls="collapseTwo"
+                >
+                  How can I request a new browser?
+                </button>
+              </h2>
+              <!-- Answer 2 -->
+              <div
+                id="collapseTwo"
+                class="accordion-collapse hidden"
+                aria-labelledby="headingTwo"
+              >
+                <div class="accordion-body">
+                  Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                  massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
+                  luctus eros aliquet convallis ultricies. Mauris augue massa,
+                  ultricies non ligula. Suspendisse imperdie tVivamus luctus
+                  eros aliquet convallis ultricies. Mauris augue massa,
+                  ultricies non ligula. Suspendisse imperdiet.
+                </div>
+              </div>
+            </div>
+            <!-- Question 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button" type="button">
+                  Is there a mobile app?
+                </button>
+              </h2>
+              <!-- Answer 3 -->
+              <div
+                id="collapseThree"
+                class="accordion-collapse hidden"
+                aria-labelledby="headingThree"
+              >
+                <div class="accordion-body">
+                  Sed consectetur quam id neque fermentum accumsan. Praesent
+                  luctus vestibulum dolor, ut condimentum urna vulputate eget.
+                  Cras in ligula quis est pharetra mattis sit amet pharetra
+                  purus. Sed sollicitudin ex et ultricies bibendum.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button" type="button">
+                  What about other Chromium browsers?
+                </button>
+              </h2>
+              <!-- Answer 4 -->
+              <div
+                id="collapseOne"
+                class="hidden"
+                aria-labelledby="headingFour"
+              >
+                <div class="accordion-body">
+                  Integer condimentum ipsum id imperdiet finibus. Vivamus in
+                  placerat mi, at euismod dui. Aliquam vitae neque eget nisl
+                  gravida pellentesque non ut velit. More Info
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="containr">
+        <div
+          class="contact-form flex flex-col items-center bg-(--lightBlue) px-8 py-[60px] lg:pt-[58px] lg:pb-[74px] text-center"
+        >
+          <p
+            class="text-white uppercase text-xs lg:text-[13px] font-medium leading-[40px] tracking-[4.615px] lg:tracking-[5px]"
+          >
+            35,000+ already joined
+          </p>
+          <h5
+            class="text-2xl lg:text-[32px] text-white font-medium leading-[28px] tracking-[-0.075px] mb-8 lg:mb-[36px] lg:mt-4 lg:w-[408px] lg:leading-[40px] lg:tracking-[-0.1px]"
+          >
+            Stay up-to-date with what we’re doing
+          </h5>
+
+          <div
+            class="form flex flex-col gap-y-4 md:flex-row w-full lg:w-[442px] lg:gap-x-4"
+          >
+            <input
+              class="bg-white w-full rounded-[5px] h-12 py-[10px] pl-[20px] lg:flex-2/3"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email address"
+            >
+            <button
+              class="text-white text-sm font-medium leading-[28px] py-[10px] tracking-[0.25px] bg-(--orange) hover:text-(--orange) hover:cursor-pointer hover:bg-white hover:border-(--orange) hover:border-[2px] hover:border-solid rounded-[5px] shadow-(--boxShadow) w-full lg:flex-1/3"
+              type="button"
+            >
+              Contact Us
+            </button>
+          </div>
+        </div>
+        <div
+          class="bg-(--navyBlue) pt-[40px] pb-[43px] lg:py-8 lg:px-[165px] flex flex-col lg:flex-row justify-between items-center"
+        >
+          <div
+            class="flex flex-col lg:flex-row lg:gap-x-[65px] items-center mb-12 lg:m-0"
+          >
+            <img
+              src="./images/logo-bookmark-light.svg"
+              alt="bookmark logo footer"
+            >
+            <ul
+              class="flex flex-col gap-y-8 lg:flex-row lg:gap-x-[46px] mt-[39px] lg:m-0 text-center"
+            >
+              <li>
+                <a class="text-white text-[15px] uppercase" href="#"
+                  >features</a
+                >
+              </li>
+              <li>
+                <a class="text-white text-[15px] uppercase" href="#">Pricing</a>
+              </li>
+              <li>
+                <a class="text-white text-[15px] uppercase" href="#">contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="social-icons flex gap-x-8">
+            <img src="./images/icon-facebook.svg" alt="icon-facebook">
+            <img src="./images/icon-twitter.svg" alt="icon-twitter">
+          </div>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>
