@@ -114,10 +114,12 @@
       </div>
 
       <!-- Features Section -->
-      <div class="features mt-[140px]">
-        <div class="flex flex-col items-center text-center px-8">
+      <div
+        class="features flex flex-col lg:gap-y-[72px] items-center mt-[140px] lg:mt-[80px] lg:pr-[165px]"
+      >
+        <div class="flex flex-col items-center text-center px-8 lg:w-[540px]">
           <h2
-            class="text-2xl text-(--navyBlue) font-medium leading-[52px] tracking-[-0.075px]"
+            class="text-2xl lg:text-[32px] text-(--navyBlue) font-medium leading-[52px] tracking-[-0.075px] lg:tracking-[-0.1px]"
           >
             Features
           </h2>
@@ -130,27 +132,29 @@
 
         <!-- Tabbed component -->
 
-        <div class="tabbed-component">
+        <div
+          class="tabbed-component flex flex-col items-center lg:gap-y-[72px]"
+        >
           <div
-            class="tabs flex flex-col md:flex-row mt-[40px] mb-[72.11px] px-8"
+            class="tabs flex flex-col md:flex-row mt-[40px] mb-[72.11px] lg:m-0 px-8"
           >
             <button
               type="button"
-              class="tab-btn active relative text-base text-(--navyBlue) leading-[17px] tracking-[0.533px] py-[20px] border-y border-(--borderColor) hover:cursor-pointer hover:text-(--orange)"
+              class="tab-btn active relative text-base text-(--navyBlue) leading-[17px] tracking-[0.533px] py-[20px] lg:pt-0 border-y lg:border-t-[0] border-(--borderColor) hover:cursor-pointer hover:text-(--orange) lg:px-10"
               data-tab="tab1"
             >
               Simple Bookmarking
             </button>
             <button
               type="button"
-              class="tab-btn relative text-base text-(--navyBlue) leading-[17px] tracking-[0.533px] py-[20px] hover:cursor-pointer hover:text-(--orange)"
+              class="tab-btn relative text-base text-(--navyBlue) leading-[17px] tracking-[0.533px] py-[20px] lg:pt-0 hover:cursor-pointer hover:text-(--orange) lg:border-b border-(--borderColor) lg:px-[50.5px]"
               data-tab="tab2"
             >
               Speedy Searching
             </button>
             <button
               type="button"
-              class="tab-btn relative text-base text-(--navyBlue) leading-[17px] tracking-[0.533px] py-[20px] border-y border-(--borderColor) hover:cursor-pointer hover:text-(--orange)"
+              class="tab-btn relative text-base text-(--navyBlue) leading-[17px] tracking-[0.533px] py-[20px] lg:pt-0 border-y border-(--borderColor) hover:cursor-pointer hover:text-(--orange) lg:border-t-[0] lg:px-[71.5px]"
               data-tab="tab3"
             >
               Easy Sharing
@@ -159,7 +163,7 @@
 
           <div class="tab-content">
             <!-- Simple Bookmarking -->
-            <div class="tab-panel active" id="tab1">
+            <div class="tab-panel active flex flex-col lg:flex-row" id="tab1">
               <div>
                 <img
                   src="./images/illustration-features-tab-1.svg"
