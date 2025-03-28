@@ -26,21 +26,46 @@
 
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
-  <body>
-    <main class="container 2xl:w-[1440px] font-rubik">
+  <body class="relative flex justify-center">
+    <main class="container 2xl:w-[1440px] font-rubik lg:pt-12">
       <!-- Desktop Navigation -->
-      <nav class="navigation flex justify-between pt-[40px] px-[2rem]">
+      <nav
+        class="navigation flex justify-between pt-[40px] px-[2rem] lg:p-0 lg:ml-[171px] lg:mr-[165px]"
+      >
         <div class="logo">
           <img src="./images/logo-bookmark.svg" alt="bookmark logo">
         </div>
 
-        <div class="hidden md:flex">
-          <ul class="flex">
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact</a></li>
+        <div class="hidden md:flex items-center lg:gap-x-12">
+          <ul class="flex lg:gap-x-12">
+            <li>
+              <a
+                class="text-(--navyBlue) text-[13px] leading-[17px] tracking-[1.5px] uppercase"
+                href="#"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-(--navyBlue) text-[13px] leading-[17px] tracking-[1.5px] uppercase"
+                href="#"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-(--navyBlue) text-[13px] leading-[17px] tracking-[1.5px] uppercase"
+                href="#"
+                >Contact</a
+              >
+            </li>
           </ul>
-          <button type="button">Login</button>
+          <button
+            class="text-white text-sm font-medium leading-[28px] py-3 px-[33px] tracking-[0.25px] bg-(--orange) hover:text-(--orange) hover:cursor-pointer hover:bg-white hover:border-(--orange) hover:border-[2px] hover:border-solid rounded-[5px] shadow-(--boxShadow) w-full"
+            type="button"
+          >
+            Login
+          </button>
         </div>
 
         <button id="mobile-menu" class="md:hidden" type="button">
@@ -49,40 +74,41 @@
       </nav>
 
       <!-- Hero -->
-
       <div
-        class="hero_banner flex flex-col-reverse md:flex-row mt-[81px] md:m-0"
+        class="hero_banner flex flex-col-reverse md:flex-row mt-[81px] md:m-0 lg:mt-[110.5px] lg:gap-x-[67.5px]"
       >
         <section
-          class="flex flex-col items-center gap-y-4 px-8 mt-3 md:m-0 text-center"
+          class="flex flex-col flex-1 items-center lg:items-start gap-y-4 lg:gap-y-6 px-8 mt-3 md:m-0 text-center lg:text-left lg:ml-[165px]"
         >
           <h1
-            class="text-(--navyBlue) text-3xl font-medium leading-[40px] tracking-[-0.094px]"
+            class="text-(--navyBlue) text-3xl lg:text-5xl font-medium leading-[40px] lg:leading-[52px] tracking-[-0.094px] lg:tracking-[-0.15px]"
           >
             A Simple Bookmark Manager
           </h1>
-          <p class="text-(--navyBlue)/50 text-[15px] leading-[25px]">
+          <p
+            class="text-(--navyBlue)/50 text-[15px] lg:text-lg leading-[25px] lg:leading-[28px]"
+          >
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.
           </p>
 
-          <div class="hero_ctas flex gap-x-[14px] mt-[1rem]">
+          <div class="hero_ctas flex gap-x-[14px] lg:gap-x-4 mt-4 lg:mt-3">
             <button
-              class="text-white text-sm font-medium leading-[28px] py-[10px] px-[1rem] tracking-[0.25px] bg-(--lightBlue) hover:text-(--lightBlue) hover:cursor-pointer hover:bg-white hover:border-(--lightBlue) hover:border-[2px] hover:border-solid rounded-[5px] shadow-(--boxShadow)"
+              class="text-white text-sm font-medium leading-[28px] py-[10px] px-4 lg:px-6 tracking-[0.25px] bg-(--lightBlue) hover:text-(--lightBlue) hover:cursor-pointer hover:bg-white hover:border-(--lightBlue) hover:border-[2px] hover:border-solid rounded-[5px] shadow-(--boxShadow)"
               type="button"
             >
               Get it on Chrome
             </button>
             <button
-              class="text-(--navyBlue)/75 text-sm font-medium leading-[28px] py-[10px] px-[1rem] tracking-[0.25px] bg-(--greyWhite) rounded-[5px] shadow-(--boxShadow) hover:border-(--darkGrey) hover:border-[2px] hover:border-solid"
+              class="text-(--navyBlue)/75 text-sm font-medium leading-[28px] py-[10px] px-[1rem] lg:px-6 t tracking-[0.25px] bg-(--greyWhite) rounded-[5px] shadow-(--boxShadow) hover:border-(--darkGrey) hover:border-[2px] hover:border-solid"
               type="button"
             >
               Get it on Firefox
             </button>
           </div>
         </section>
-        <div class="hero-image">
+        <div class="hero-image flex-1">
           <img src="./images/illustration-hero.svg" alt="hero banner">
         </div>
       </div>
