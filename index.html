@@ -27,7 +27,7 @@
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
   <body class="relative flex justify-center">
-    <main class="container 2xl:w-[1440px] font-rubik lg:pt-12">
+    <main class="container relative 2xl:w-[1440px] font-rubik lg:pt-12">
       <!-- Desktop Navigation -->
       <nav
         class="navigation flex justify-between pt-[40px] px-[2rem] lg:p-0 lg:ml-[171px] lg:mr-[165px]"
@@ -72,6 +72,59 @@
           <img src="./images/icon-hamburger.svg" alt="mobile menu">
         </button>
       </nav>
+
+      <!-- Mobile and Tablet Navigation -->
+      <nav
+        id="mobile-nav"
+        class="mobile_nav flex flex-col absolute top-0 z-2 pt-10 pl-8 pr-[34px] gap-y-10 w-full md:hidden"
+      >
+        <div class="flex justify-between">
+          <img
+            src="./images/logo-bookmark-light.svg"
+            alt="mobile bookmark logo"
+          >
+          <button id="close-menu" type="button">
+            <img src="./images/icon-close.svg" alt="icon close mobile menu">
+          </button>
+        </div>
+
+        <div class="flex flex-col gap-y-6">
+          <ul class="flex flex-col text-center">
+            <li class="py-6 border-t border-white/15">
+              <a
+                class="text-white text-xl leading-[17px] tracking-[2.308px] uppercase"
+                href="#"
+                >Features</a
+              >
+            </li>
+            <li class="py-6 border-y border-white/15">
+              <a
+                class="text-white text-xl leading-[17px] tracking-[2.308px] uppercase"
+                href="#"
+                >Pricing</a
+              >
+            </li>
+            <li class="py-6 border-b border-white/15">
+              <a
+                class="text-white text-xl leading-[17px] tracking-[2.308px] uppercase"
+                href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <button
+            class="text-white text-xl font-medium leading-[17px] py-4 tracking-[2.308px] border-white border-[2px] border-solid rounded-[5px] w-full uppercase"
+            type="button"
+          >
+            Login
+          </button>
+        </div>
+      </nav>
+
+      <div
+        id="overlay"
+        class="fixed top-0 left-0 w-full h-full opacity-95 z-1 bg-(--navyBlue) backdrop-blur-[16.309690475463867px] md:hidden"
+      ></div>
 
       <!-- Hero -->
       <div
@@ -411,7 +464,7 @@
               </svg>
             </h2>
             <!-- Answer 1 -->
-            <div id="collapseOne" class="" aria-labelledby="headingOne">
+            <div id="collapseOne" class="hidden" aria-labelledby="headingOne">
               <div
                 class="accordion-body text-(--navyBlue)/75 text-[15px] lg:text-base leading-[30px] lg:leading-[36px] tracking-[0.141px] lg:tracking-[0.15px] mb-7"
               >
