@@ -114,3 +114,51 @@ accordionItems.forEach((item) => {
 openMobileMenu.addEventListener("click", toggleMenu);
 closeMobileMenu.addEventListener("click", toggleMenu);
 overlay.addEventListener("click", toggleMenu); // Close menu when overlay is clicked
+
+// Signup input
+const inputField = document.getElementById("email");
+const error = document.getElementById("error");
+const errorIcon = document.querySelector(".error-icon");
+const submitBtn = document.getElementById("submit-btn");
+// Regular expression for email validation as per HTML specification
+const emailRegExp =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+// Check if the email is valid
+const isValidEmail = () => {
+  const validity = email.value.length !== 0 && emailRegExp.test(email.value);
+  return validity;
+};
+
+// Update email input class based on validity
+const setEmailClass = (isValid) => {
+  if (isValid) {
+    email.classList.remove("error");
+    email.classList.add("rounded-[5px]");
+    errorIcon.classList.add("hidden");
+  } else {
+    email.classList.add("error");
+    email.classList.remove("rounded-[5px]");
+    email.classList.add("rounded-t-[5px]");
+    errorIcon.classList.remove("hidden");
+  }
+};
+// rounded-t-[5px]
+// Update error message and visibility
+const updateError = (isValidInput) => {
+  if (isValidInput) {
+    error.textContent = "";
+    error.classList.add("hidden");
+  } else {
+    error.textContent = " Whoops, make sure it’s an email";
+    error.classList.remove("hidden");
+  }
+};
+// Handle input event to update email validity
+const handleInput = () => {
+  const emailInput = isValidEmail();
+  setEmailClass(emailInput);
+  updateError(emailInput);
+};
+
+email.addEventListener("input", handleInput);
