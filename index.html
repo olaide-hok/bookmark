@@ -671,14 +671,26 @@
           <div
             class="form flex flex-col gap-y-4 md:flex-row w-full lg:w-[442px] lg:gap-x-4"
           >
-            <input
-              class="bg-white w-full rounded-[5px] h-12 py-[10px] pl-[20px] lg:flex-2/3"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter your email address"
-            >
+            <div class="input-wrapper relative lg:flex-2/3">
+              <input
+                class="bg-white w-full rounded-[5px] h-12 py-[10px] pl-[20px]"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email address"
+              >
+              <img
+                class="error-icon hidden absolute right-4 top-[14px]"
+                src="./images/icon-error.svg"
+                alt="input error icon"
+              >
+              <p
+                id="error"
+                class="error-text hidden bg-(--orange) rounded-b-[5px] font-medium tracking-[0.25px] italic text-left text-[10px] text-white pt-1 pb-[6px] pl-3"
+              ></p>
+            </div>
             <button
+              id="submit-btn"
               class="text-white text-sm font-medium leading-[28px] py-[10px] tracking-[0.25px] bg-(--orange) hover:text-(--orange) hover:cursor-pointer hover:bg-white hover:border-(--orange) hover:border-[2px] hover:border-solid rounded-[5px] shadow-(--boxShadow) w-full lg:flex-1/3"
               type="button"
             >
