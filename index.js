@@ -72,6 +72,44 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
+// Accordion implementation
+const accordionItems = document.querySelectorAll(".accordion-item");
+accordionItems.forEach((item) => {
+  const header = item.querySelector(".accordion-header");
+  const button = item.querySelector(".accordion-button");
+  const collapse = item.querySelector(".accordion-collapse");
+  const icon = item.querySelector(".accordion-icon");
+
+  // Add click event to header (including button and icon)
+  header.addEventListener("click", () => {
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+
+    // Toggle aria-expanded attribute
+    button.setAttribute("aria-expanded", !isOpen);
+
+    // Toggle collapse visibility
+    collapse.classList.toggle("hidden");
+
+    // Rotate the icon
+    icon.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+
+    // Optional: Change button color when expanded
+    if (!isOpen) {
+      const path = icon.querySelector("path");
+      path.style.stroke = "var(--orange)";
+    } else {
+      const path = icon.querySelector("path");
+      path.style.stroke = "var(--lightBlue)";
+    }
+  });
+  button.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      header.click();
+    }
+  });
+});
+
 // Add event listeners
 openMobileMenu.addEventListener("click", toggleMenu);
 closeMobileMenu.addEventListener("click", toggleMenu);
