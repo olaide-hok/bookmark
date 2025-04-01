@@ -27,11 +27,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./bookmark.png)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [link](https://olaide-hok.github.io/bookmark/)
 
 ## My process
 
@@ -42,11 +42,11 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Tailwind CSS
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Get started with Tailwind CSS](https://tailwindcss.com/docs/installation/tailwind-cli) - This helped me in getting started with Tailwind. I really liked this pattern and will use it going forward.
 
 ## Author
 
