@@ -738,6 +738,13 @@
       }
     }
   }
+  .hover\:fill-\(--orange\) {
+    &:hover {
+      @media (hover: hover) {
+        fill: var(--orange);
+      }
+    }
+  }
   .hover\:text-\(--lightBlue\) {
     &:hover {
       @media (hover: hover) {
