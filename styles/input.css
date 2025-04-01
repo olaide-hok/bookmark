@@ -43,3 +43,8 @@
   cursor: pointer;
   color: var(--orange);
 }
+
+input.error {
+  border: 2px solid var(--orange);
+  background: #fff;
+}
