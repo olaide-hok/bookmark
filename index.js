@@ -116,6 +116,7 @@ closeMobileMenu.addEventListener("click", toggleMenu);
 overlay.addEventListener("click", toggleMenu); // Close menu when overlay is clicked
 
 // Signup input
+const form = document.querySelector(".form");
 const inputField = document.getElementById("email");
 const error = document.getElementById("error");
 const errorIcon = document.querySelector(".error-icon");
@@ -143,7 +144,7 @@ const setEmailClass = (isValid) => {
     errorIcon.classList.remove("hidden");
   }
 };
-// rounded-t-[5px]
+
 // Update error message and visibility
 const updateError = (isValidInput) => {
   if (isValidInput) {
@@ -161,4 +162,21 @@ const handleInput = () => {
   updateError(emailInput);
 };
 
+function handleSubmit(e) {
+  e.preventDefault(); // prevent the default browser behaviour
+
+  const emailInput = isValidEmail();
+  setEmailClass(emailInput);
+  updateError(emailInput);
+
+  if (emailInput) {
+    const formData = new FormData(e.target);
+    const { email } = Object.fromEntries(formData);
+    alert(`Thank you! You will be contacted via ${email}`);
+
+    form.reset();
+  }
+}
+
 email.addEventListener("input", handleInput);
+form.addEventListener("submit", handleSubmit);
